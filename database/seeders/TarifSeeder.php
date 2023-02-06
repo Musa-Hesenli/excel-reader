@@ -24,8 +24,6 @@ class TarifSeeder extends Seeder
             return;
         }
 
-        Log::debug("bura girdim");
-
         $beatifiedData = ExcelConverterHelper::formatData( $data[ 'data' ] );
         if ( ! empty( $beatifiedData ) )
         {

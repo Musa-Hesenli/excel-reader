@@ -6,13 +6,12 @@ use App\Http\Helpers\ExcelConverterHelper;
 use App\Http\Helpers\ResponseHelper;
 use App\Http\Services\ExcelFileConverter;
 use App\Models\Tarif;
-use Illuminate\Http\Request;
 
 class TarifController extends Controller
 {
-    public function index( Request $request )
+    public function index()
     {
-        return Tarif::all();
+        return ResponseHelper::OK( Tarif::all() );
     }
 
 
