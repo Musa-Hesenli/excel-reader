@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\ParserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TarifController;
 
@@ -16,6 +16,9 @@ use App\Http\Controllers\TarifController;
 */
 
 Route::post( '/tarifs/all', [ TarifController::class, 'index' ] );
-
 // processing merhelesini route kimi yaratdimki yoxlamaq rahat olsun
 Route::post( '/tarifs/process', [ TarifController::class, 'process' ] );
+
+Route::post( 'parse-product-link', [ ParserController::class, 'parseLink' ] );
+
+
